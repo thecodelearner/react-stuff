@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 
-export class Hitman extends Component {
+class Hitman extends Component {
   render() {
     // console.log(this.props);
-    const { name, parent, born, alias } = this.props;
+    const { hitmans } = this.props;
 
-    return (
-      <div className="hitman">
-        <div>Name: {name}</div>
-        <div>Parent: {parent}</div>
-        <div>Born: {born}</div>
-        <div>Alias: {alias}</div>
-      </div>
-    );
+    const hitmanList = hitmans.map((hitman) => {
+      return (
+        <div className="hitman" key={hitman.id}>
+          <div>Name: {hitman.name}</div>
+          <div>Age: {hitman.age}</div>
+          <div>Alias: {hitman.alias}</div>
+          <br />
+        </div>
+      );
+    });
+
+    return <div className="hitman-list">{hitmanList}</div>;
   }
 }
 
