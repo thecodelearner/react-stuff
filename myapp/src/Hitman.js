@@ -2,12 +2,15 @@ import React, { Component } from "react";
 
 export class Hitman extends Component {
   render() {
+    // console.log(this.props);
+    const { name, parent, born, alias } = this.props;
+
     return (
       <div className="hitman">
-        <div>Name: Agent 47</div>
-        <div>Parent: Dr. Otto Wolfgang Ort-meyer</div>
-        <div>Born: September 5, 1964</div>
-        <div>Alias: Tobias Reaper</div>
+        <div>Name: {name}</div>
+        <div>Parent: {parent}</div>
+        <div>Born: {born}</div>
+        <div>Alias: {alias}</div>
       </div>
     );
   }
