@@ -12,6 +12,15 @@ class App extends Component {
     ],
   };
 
+  addHitman = (hitman) => {
+    // console.log(hitman);
+    hitman.id = Math.random();
+    let hitmans = [...this.state.hitmans, hitman];
+    this.setState({
+      hitmans: hitmans,
+    })
+  };
+
   render() {
     return (
       <div className="App">
@@ -20,7 +29,7 @@ class App extends Component {
 
         <Hitman hitmans={this.state.hitmans} />
 
-        <AddHitman />
+        <AddHitman addHitman={this.addHitman} />
       </div>
     );
   }
