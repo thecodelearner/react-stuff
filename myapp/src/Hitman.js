@@ -1,6 +1,7 @@
 import React from "react";
 
 const Hitman = ({ hitmans }) => {
+  // TODO done: Conditional logic using if else
   // const hitmanList = hitmans.map((hitman) => {
   //   if (hitman.age > 20) {
   //     return (
@@ -14,6 +15,7 @@ const Hitman = ({ hitmans }) => {
   //   } else return null;
   // });
 
+  // TODO done: Conditional logic using ternary operator
   const hitmanList = hitmans.map((hitman) => {
     return hitman.age > 20 ? (
       <div className="hitman" key={hitman.id}>
