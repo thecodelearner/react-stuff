@@ -14,8 +14,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>My first react app!</h1>
-        <p>Welcome!</p>
+        <h2>Confidential - Diana Burnwood</h2>
+        <p>Agent 47 alternatives:</p>
 
         <Hitman hitmans={this.state.hitmans} />
       </div>
