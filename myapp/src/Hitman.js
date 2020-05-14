@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hitman = ({ hitmans }) => {
+const Hitman = ({ hitmans, deleteHitman }) => {
   // TODO done: Conditional logic using if else
   // const hitmanList = hitmans.map((hitman) => {
   //   if (hitman.age > 20) {
@@ -17,12 +17,13 @@ const Hitman = ({ hitmans }) => {
 
   // TODO done: Conditional logic using ternary operator
   const hitmanList = hitmans.map((hitman) => {
-    return hitman.age > 20 ? (
+    return hitman.age > 10 ? (
       <div className="hitman" key={hitman.id}>
         <div>Name: {hitman.name}</div>
         <div>Age: {hitman.age}</div>
         <div>Alias: {hitman.alias}</div>
-        <br />
+        <button onClick={() => { deleteHitman(hitman.id) }}>Terminate Hitman</button>
+        <br /><br />
       </div>
     ) : null;
   });

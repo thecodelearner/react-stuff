@@ -14,12 +14,22 @@ class App extends Component {
 
   addHitman = (hitman) => {
     // console.log(hitman);
-    hitman.id = Math.random();
+    hitman.id = Math.floor(Math.random() * 100);
     let hitmans = [...this.state.hitmans, hitman];
     this.setState({
       hitmans: hitmans,
     })
   };
+
+  deleteHitman = (id) => {
+    // console.log(id);
+    let hitmans = this.state.hitmans.filter(hitman => {
+      return hitman.id !== id
+    });
+    this.setState({
+      hitmans: hitmans
+    })
+  }
 
   render() {
     return (
@@ -27,7 +37,7 @@ class App extends Component {
         <h2>Confidential - Diana Burnwood</h2>
         <p>Agent 47 alternatives:</p>
 
-        <Hitman hitmans={this.state.hitmans} />
+        <Hitman hitmans={this.state.hitmans} deleteHitman={this.deleteHitman} />
 
         <AddHitman addHitman={this.addHitman} />
       </div>
