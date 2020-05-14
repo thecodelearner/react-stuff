@@ -1,4 +1,5 @@
 import React from "react";
+import './Hitman.css';
 
 const Hitman = ({ hitmans, deleteHitman }) => {
   // TODO done: Conditional logic using if else

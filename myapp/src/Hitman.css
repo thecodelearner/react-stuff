@@ -1,0 +1,10 @@
+body {
+  background-color: aquamarine;
+  transition: all 1s;
+}
+
+form {
+  background-color: floralwhite;
+  padding: 1em;
+  margin: 1em;
+}
